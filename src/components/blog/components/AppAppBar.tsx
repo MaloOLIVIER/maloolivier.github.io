@@ -14,20 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import ToggleColorMode from './ToggleColorMode';
 import Typography from '@mui/material/Typography';
-
-/*export function NavBar() {
-  return (
-    <nav className="navbar">
-      <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/Resume">Resume</Link></li>
-        <li><Link to="/Publications">Publications</Link></li>
-        <li><Link to="/projects">Projects</Link></li>
-        <li><Link to="/Contact">Contact</Link></li>
-      </ul>
-    </nav>
-  );
-}*/
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   display: 'flex',
@@ -58,17 +45,45 @@ export default function AppAppBar({
     setOpen(newOpen);
   };
 
+  const [isHovered, setIsHovered] = React.useState(false);
+  const isMobile = useMediaQuery('(max-width:600px)');
+
+  const handleMouseEnter = () => {
+    if (!isMobile) {
+      setIsHovered(true);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      setIsHovered(false);
+    }
+  };
+
+  const handleClick = () => {
+    if (isMobile) {
+      setIsHovered(!isHovered);
+    }
+  };
+
   return (
     <AppBar
-      position="fixed"
-      sx={{ boxShadow: 0, bgcolor: 'transparent', backgroundImage: 'none', mt: 10 }}
+      sx={{ boxShadow: 0, bgcolor: 'transparent', backgroundImage: 'none', mt: 2, position: { xs: 'absolute', md: 'fixed' } }}
     >
       <Container maxWidth="lg">
         <StyledToolbar variant="dense" disableGutters>
           <Box sx={{ flexGrow: 1, display: 'flex', alignItems: 'center', px: 0 }}>
+            <Typography
+              sx={{ fontFamily: 'Roboto, sans-serif' }}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+              onClick={handleClick}
+            >
+              {isHovered ? '🕺' : '👨‍🔬'}
+            </Typography>
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
               <Link to="/">
-                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif' }}>
+                <Button variant="text" color="info" size="small" sx={{ fontFamily: 'Roboto, sans-serif', ml: 1 }}>
                   Home
                 </Button>
               </Link>
@@ -120,42 +135,42 @@ export default function AppAppBar({
                   <IconButton onClick={toggleDrawer(false)}>
                     <CloseRoundedIcon />
                   </IconButton>
+                  <MenuItem>
+                    <ToggleColorMode
+                      data-screenshot="toggle-mode"
+                      mode={mode}
+                      toggleColorMode={toggleColorMode}
+                    />
+                  </MenuItem>
                 </Box>
                 <Divider sx={{ my: 3 }} />
-                <MenuItem>
+                <MenuItem onClick={toggleDrawer(false)}>
                   <Link to="/" style={{ textDecoration: 'none' }}>
                     <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
                       Home
                     </Typography>
                   </Link>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={toggleDrawer(false)}>
                   <Link to="/Resume" style={{ textDecoration: 'none' }}>
                     <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
                       Resume
                     </Typography>
                   </Link>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={toggleDrawer(false)}>
                   <Link to="/Publications" style={{ textDecoration: 'none' }}>
                     <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
                       Publications
                     </Typography>
                   </Link>
                 </MenuItem>
-                <MenuItem>
+                <MenuItem onClick={toggleDrawer(false)}>
                   <Link to="/Contact" style={{ textDecoration: 'none' }}>
                     <Typography sx={{ fontFamily: 'Roboto, sans-serif' }}>
                       Contact
                     </Typography>
                   </Link>
-                </MenuItem>
-                <MenuItem>
-                  <ToggleColorMode
-                    data-screenshot="toggle-mode"
-                    mode={mode}
-                    toggleColorMode={toggleColorMode}
-                  />
                 </MenuItem>
               </Box>
             </Drawer>

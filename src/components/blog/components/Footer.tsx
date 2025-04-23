@@ -51,7 +51,7 @@ export default function Footer() {
             <Box
               sx={{
                 display: 'flex',
-                justifyContent: 'center',
+                justifyContent: 'flex-start',
                 alignItems: 'center',
                 flexWrap: 'wrap', // Wrap the items if they overflow
               }}

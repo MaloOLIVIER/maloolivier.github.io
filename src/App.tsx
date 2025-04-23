@@ -9,6 +9,7 @@ import Contact from './components/Contact/Contact';
 import getBlogTheme from './components/blog/theme/getBlogTheme';
 import AppAppBar from './components/blog/components/AppAppBar';
 import Footer from './components/blog/components/Footer';
+import '@fontsource/roboto/100.css';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';

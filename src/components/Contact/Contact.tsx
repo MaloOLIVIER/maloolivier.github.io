@@ -18,7 +18,7 @@ import { MALO_MAIL, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../App';
 import CircularProgress from '@mui/material/CircularProgress';
 
 export function GradientCircularProgress({ activateWhen, size }) {
-    if (!activateWhen || !activateWhen.includes('.')) return null;
+    if (!activateWhen?.includes('.')) return null;
     return (
         <React.Fragment>
             <svg width={0} height={0}>
@@ -89,9 +89,44 @@ const Contact = (props: { disableCustomTheme?: boolean }) => {
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        const name = data.get('name');
-        const email = data.get('email');
-        const message = data.get('message');
+        const name = data.get('name') as string;
+        const email = data.get('email') as string;
+        const message = data.get('message') as string;
+
+        let isFormValid = true;
+    
+        if (!name) {
+            setNameError(true);
+            setNameErrorMessage('Please enter your name.');
+            isFormValid = false;
+        } else {
+            setNameError(false);
+            setNameErrorMessage('');
+        }
+
+        if (!email || !/\S+@\S+\.\S+/.test(email)) {
+            setEmailError(true);
+            setEmailErrorMessage('Please enter a valid email address.');
+            isFormValid = false;
+        } else {
+            setEmailError(false);
+            setEmailErrorMessage('');
+        }
+
+        if (!message) {
+            setMessageError(true);
+            setMessageErrorMessage('Please enter a message.');
+            isFormValid = false;
+        } else {
+            setMessageError(false);
+            setMessageErrorMessage('');
+        }
+        
+        if (!isFormValid) {
+            return; // Stop submission if validation fails
+        }
+
+        setMessageStatus("Sending...");
 
         const templateParams = {
             to_mail: MALO_MAIL,
@@ -100,7 +135,7 @@ const Contact = (props: { disableCustomTheme?: boolean }) => {
             message: message,
         };
 
-        isValid && emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+        emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
             .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
                 setMessageStatus('Thanks a lot!');
@@ -166,7 +201,7 @@ const Contact = (props: { disableCustomTheme?: boolean }) => {
                     <Typography
                         component="h1"
                         variant="h4"
-                        sx={{ width: '100%', fontSize: 'clamp(2rem, 10vw, 2.15rem)' }}
+                        sx={{ fontWeight: 100 }}
                         fontFamily={'Roboto'}
                     >
                         Contact
@@ -238,7 +273,6 @@ const Contact = (props: { disableCustomTheme?: boolean }) => {
                             type="submit"
                             fullWidth
                             variant="contained"
-                            onClick={validateInputs}
                             sx={{ fontFamily: 'Roboto, sans-serif' }}
                         >
                             {!messageStatus ? "Send" : messageStatus}

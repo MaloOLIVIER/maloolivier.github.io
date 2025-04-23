@@ -1,11 +1,92 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en" xml:lang="en">
 <head>
-    <meta http-equiv="refresh" content="0; URL=./" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <meta http-equiv="refresh" content="5; URL=./" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .container {
+            max-width: 800px;
+        }
+        .error-code {
+            font-size: 10rem;
+            font-weight: 700;
+            margin-bottom: 0;
+            background: linear-gradient(45deg, #4169E1, #308fe8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+            animation: pulse 2s infinite;
+        }
+        .message {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+        .description {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            color: #6c757d;
+        }
+        .home-button {
+            background-color: #4169E1;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .home-button:hover {
+            background-color: #308fe8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .redirect-message {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+    </style>
 </head>
-
 <body>
+    <div class="container">
+        <h1 class="error-code">404</h1>
+        <h2 class="message">Page Not Found</h2>
+        <p class="description">The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+        <a href="./" class="home-button">Back to Homepage</a>
+        <p class="redirect-message">You will be automatically redirected to the homepage in 5 seconds.</p>
+    </div>
 </body>
-
 </html>
