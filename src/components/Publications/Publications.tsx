@@ -84,7 +84,7 @@ export const cardData = [
     {
         img: '/static/images/content/vibravox_sensors.png',
         tag: 'Body-Conduction audio sensors ; Robust Communication ; Speech enhancement ; Speech recognition ; Speaker verification.',
-        title: 'Vibravox: A Dataset of French Speech Captured with Body-conduction Audio Sensors',
+        title: 'VibraVox: A Dataset of French Speech Captured with Body-conduction Audio Sensors',
         description:
             `Vibravox is a dataset compliant with the General Data Protection Regulation (GDPR) containing audio recordings using five different body-conduction audio sensors : two in-ear microphones, two bone conduction vibration pickups and a laryngophone.
             The data set also includes audio data from an airborne microphone used as a reference.
@@ -96,7 +96,7 @@ export const cardData = [
             { name: 'Julien Hauret', avatar: '/static/images/avatar/julien.jpg' },
             { name: 'Malo Olivier', avatar: '/static/images/avatar/malo.jpg' },
         ],
-        date: "July 17, 2024",
+        date: "April 19, 2025",
     },
     {
         img: '/static/images/content/insa.png',
@@ -142,7 +142,7 @@ const Publications: React.FC = () => {
                 <Grid size={{ xs: 12, md: 8 }}>
                     <SyledCard
                         variant="outlined"
-                        onClick={() => handleClick("https://arxiv.org/pdf/2407.11828")}
+                        onClick={() => handleClick("https://doi.org/10.1016/j.specom.2025.103238")}
                         onFocus={() => handleFocus(0)}
                         onBlur={handleBlur}
                         tabIndex={0}
