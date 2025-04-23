@@ -88,6 +88,7 @@ const Homepage: React.FC = () => {
                     <CardMedia
                         component="img"
                         image="/static/images/avatar/malo.jpg"
+                        alt="Photo of Malo Olivier"
                         onClick={() => handleClick("/static/images/papers/CVENMaloOLIVIER.pdf")}
                         title="Malo"
                         sx={{
