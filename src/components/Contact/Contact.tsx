@@ -18,7 +18,7 @@ import { MALO_MAIL, PUBLIC_KEY, SERVICE_ID, TEMPLATE_ID } from '../../App';
 import CircularProgress from '@mui/material/CircularProgress';
 
 export function GradientCircularProgress({ activateWhen, size }) {
-    if (!activateWhen || !activateWhen.includes('.')) return null;
+    if (!activateWhen?.includes('.')) return null;
     return (
         <React.Fragment>
             <svg width={0} height={0}>
