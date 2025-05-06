@@ -113,7 +113,7 @@ const Homepage: React.FC = () => {
                 <Grid size={{ xs: 12, md: 6 }}>
                     <SyledCard
                         variant="outlined"
-                        onClick={() => handleClick("https://arxiv.org/pdf/2407.11828")}
+                        onClick={() => handleClick("https://doi.org/10.1016/j.specom.2025.103238")}
                         onFocus={() => handleFocus(0)}
                         onBlur={handleBlur}
                         tabIndex={0}
