@@ -95,8 +95,13 @@ export const cardData = [
         authors: [
             { name: 'Julien Hauret', avatar: '/static/images/avatar/julien.jpg' },
             { name: 'Malo Olivier', avatar: '/static/images/avatar/malo.jpg' },
+            { name: 'Thomas Joubaud', avatar: '/static/images/avatar/' },
+            { name: 'Christophe Langrenne ', avatar: '/static/images/avatar/' },
+            { name: 'Sarah Poirée', avatar: '/static/images/avatar/' },
+            { name: 'Véronique Zimpfer', avatar: '/static/images/avatar/' },
+            { name: 'Éric Bavu', avatar: '/static/images/avatar/eric.jpg' },
         ],
-        date: "April 19, 2025",
+        date: "April 30, 2025",
     },
     {
         img: '/static/images/content/insa.png',
