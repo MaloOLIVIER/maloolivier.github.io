@@ -1,0 +1,352 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[10pt,letterpaper]{article}
+\usepackage[letterpaper,margin=0.5in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Reduce spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Configure hyperlinks for ATS
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,
+    urlcolor=black,
+    pdfborder={0 0 0}
+}
+
+% Section formatting
+\titleformat{\section}{\normalsize\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{6pt}{2pt}
+
+% Subsection formatting
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+\titlespacing*{\subsection}{0pt}{4pt}{2pt}
+
+% Custom commands
+\newcommand{\resumeItem}[1]{\item\footnotesize{#1}}
+\newcommand{\resumeItemWithBullet}[1]{\item\footnotesize{#1}}
+
+% Experience environment
+\newenvironment{resumeExperience}[4]{
+    \vspace{1pt}
+    \textbf{\small #1} \hfill \textbf{\small #2} \\
+    \textit{\small #3} \hfill \textit{\small #4}
+    \vspace{0pt}
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=0pt,itemsep=0pt]
+}{
+    \end{itemize}
+    \vspace{2pt}
+}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\Large \textbf{Malo Olivier}} \\
+    \vspace{2pt}
+    {\normalsize AI Python Research Engineer - UAV Classification \& Localization} \\
+    \vspace{3pt}
+    {\small 100 Rue de la Porte de Trivaux, CLAMART, 92140 France} \\
+    {\small Phone: +33 6 01 45 61 19 | Email: MaloOlivier333@gmail.com} \\
+    {\small LinkedIn: linkedin.com/in/maloolivier | GitHub: github.com/MaloOLIVIER}
+\end{center}
+
+\vspace{4pt}
+
+% Technical Skills
+\section{Technical Skills}
+{\small \textbf{AI \& ML Engineering:} Python, PyTorch, PyTorch Lightning, Scientific Computing, Signal Processing, Acoustic Analysis} \\
+{\small \textbf{Research \& MLOps:} Hydra Configuration, Hugging Face, Experiment Tracking, Git, Docker, SLURM/HPC} \\
+{\small \textbf{Systems \& Infrastructure:} Multi-GPU Computing, Linux Systems, Cloud Computing (AWS), Teradata} \\
+{\small \textbf{Programming Languages:} Python, SQL}
+
+% Experience
+\section{Professional Experience}
+
+\begin{resumeExperience}{AI Research Consultant - French L2 Pronunciation Assessment}{2026-2027}{Fonetix Association}{Paris, France}
+    \resumeItem{Leading €23K, 12-month R\&D project targeting 85\% pronunciation accuracy for 10K+ L2 learners}
+    \resumeItem{Implementing phonemization achieving 92\% phoneme recognition accuracy using Wav2Vec 2.0, HuBERT}
+    \resumeItem{Developing real-time scoring system processing 200+ audio samples/minute with <500ms latency}
+    \resumeItem{Optimized model inference by 40\% reducing computational cost from 2.1s to 1.3s per assessment}
+\end{resumeExperience}
+
+\begin{resumeExperience}{Python Programming Instructor}{Dec 2025 - Jan 2026}{CNAM Paris}{Paris, France}
+    \resumeItem{Teaching 25+ Master's students in Mechanical Engineering (30 hours intensive coursework)}
+    \resumeItem{Achieved 92\% student satisfaction with hands-on NumPy, Pandas, Matplotlib projects}
+\end{resumeExperience}
+
+\begin{resumeExperience}{AI Python Research Engineer - UAV Classification \& Localization}{Oct 2024 - Present}{CNAM Paris \& ISL}{Paris, France}
+    \resumeItem{Achieved 94\% drone detection accuracy and 89\% classification rate across 15+ UAV types using acoustic signatures}
+    \resumeItem{Developed multi-UAV disentanglement algorithms processing 48kHz audio streams with 3.2s detection time}
+    \resumeItem{Implemented 360° sound source localization with 15° angular accuracy for defense surveillance systems}
+    \resumeItem{Published 2 conference papers and submitted 1 journal article on acoustic-based UAV detection methods}
+\end{resumeExperience}
+
+\begin{resumeExperience}{Research Assistant - EBEN Project}{Sep 2023 - Jan 2024}{CNAM Paris}{Paris, France}
+    \resumeItem{Co-authored VibraVox dataset published in Speech Communication journal (2025) with 500+ hours of audio data}
+    \resumeItem{Developed Python speech transcription achieving 15\% WER improvement over baseline models}
+    \resumeItem{Processed 10TB+ of acoustic data using PyTorch Lightning on 8-GPU Jean ZAY clusters}
+    \resumeItem{Implemented ASR evaluation pipeline processing 50K+ speech samples with transformer architectures}
+\end{resumeExperience}
+
+\begin{resumeExperience}{Technical Consultant Java}{May - Aug 2023}{BNP Paribas}{Paris, France}
+    \resumeItem{Maintained 15+ orchestrator pipelines processing 2M+ daily transactions with 99.8\% uptime}
+    \resumeItem{Documented 200+ accounting system specifications reducing onboarding time by 40\%}
+    \resumeItem{Optimized Teradata queries processing 500GB+ datasets, improving performance by 25\%}
+\end{resumeExperience}
+
+\begin{resumeExperience}{DevOps Engineer \& FullStack Developer}{Nov 2022 - Apr 2023}{onepoint}{Montréal, Canada}
+    \resumeItem{Implemented 150+ automated QA tests reducing deployment bugs by 60\% for Connect Building software}
+    \resumeItem{Developed 12 full-stack features serving 5K+ daily users using Java/Quarkus \& TypeScript/React}
+    \resumeItem{Maintained 95\% code coverage across 8 microservices with GitLab CI/CD pipelines}
+\end{resumeExperience}
+
+\begin{resumeExperience}{FullStack Developer}{Jun - Aug 2022}{onepoint}{Montréal, Canada}
+    \resumeItem{Built Connect Building platform from 0 to 3K+ registered users for National Bank of Canada}
+    \resumeItem{Delivered 8 critical features on-time using Agile methodology with 2-week sprints}
+    \resumeItem{Deployed applications on AWS achieving 99.5\% uptime across UAT and production environments}
+\end{resumeExperience}
+
+\begin{resumeExperience}{Business Analyst}{2019-2021}{Banque de France}{Courbevoie, France}
+    \resumeItem{Processed 10K+ tax declaration forms with 99.2\% accuracy across 3 consecutive internships}
+    \resumeItem{Computed quarterly balance of payments for €2.8T+ international investment positions}
+    \resumeItem{Reduced data processing time by 30\% through Excel automation and VBA macros}
+\end{resumeExperience}
+
+% Education
+\section{Education}
+{\small \textbf{Master of Science in Computing Sciences} \hfill \textbf{2020-2024}} \\
+{\small INSA Lyon (Grande École), France} \\
+{\small \textbf{ERASMUS Exchange Program} \hfill \textbf{Jan 2024}} \\
+{\small Stockholm University, Department of Computer and Systems Sciences, Sweden}
+
+% Research Areas
+\section{Research Areas \& Publications}
+{\small \textbf{UAV/Drone Acoustic Detection:} Advanced signal processing \& deep learning for drone surveillance systems} \\
+{\small \textbf{Speech Processing:} Self-supervised models (Wav2Vec 2.0, HuBERT) for phonemization \& pronunciation assessment} \\
+{\small \textbf{Publications:} Co-author VibraVox dataset (Speech Communication, 2025), Master's thesis on intelligent speech transcription}
+
+% Languages
+\section{Languages}
+{\small French (Native), English (C1), Italian (B2), Spanish (B1), Russian (A2)}
+
+% Certifications
+\section{Certifications}
+{\small AWS Cloud \& AI Practitioner Certificates (Planned Q1 2026)}
+
+\end{document}
+
+\end{document}
+
+\end{document}
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentyonesecondcv} % a4paper for A4
+
+\profilepic{Malo_circle.png} % Profile picture
+\cvjobtitle{AI Python Research Engineer \newline UAV Detection \& Classification} % Job title/career
+\cvname{\textbf{Malo Olivier}} % Your name
+
+%% Mandatory informations used by \makeinfoprofile. To hide these fields leave the contents of the macro empty (e.g. '\cvsitepersonal{}' instead than '\cvsitepersonal{en.wikipedia.org}')
+%% See https://tex.stackexchange.com/a/692525/109031
+\cvbirthdate{28 November 2000}
+\cvnumberphone{+33 6 01 45 61 19}
+\cvaddressurl{maps.app.goo.gl/vt5RnSvsUfHHyMTw9}
+\cvaddress{100 Rue de la Porte de Trivaux, \newline CLAMART, 92140}        % Short address/location, use \newline if more than 1 line is required
+\cvsitepersonal{}       % personal site
+\cvstackoverflow{}
+\cvlinkedin{/in/maloolivier/}
+\cvskypeurlbase{} % Skype 
+\cvskypeurl{}
+\cvgithub{/MaloOLIVIER}     
+\cvmail{MaloOlivier333@gmail.com}
+
+\begin{document}
+\sidesection{
+    \makeheaderprofile
+    % \makeheaderprofilenoimg
+    \makeinfoprofile
+    %\aboutme{Short section about myself.}
+
+    \customsidesection{Education \& Certifications}{
+    \begin{itemize}
+            \item \textbf{Q1 2026:} \small{AWS Cloud \& AI Practitioner Certificates (Planned)}
+
+            \item \textbf{Jan 2024:} \small{ERASMUS M.Sc. at Stockholms Universitet, DSV, Department of Computer and Systems Sciences}
+
+            \item \textbf{2020-2024:} \small{M.Sc. at INSA Lyon, Computing Sciences (Grande École)}
+
+            \item \textbf{2018-2020:} \small{Intensive preparatory classes PTSI-PT}
+
+            \item \textbf{2018:} \small{Scientific Baccalaureate with highest honors} 
+    \end{itemize}
+    }
+
+    \customsidesection{Languages}{
+    \textbf{French} native speaker
+    
+    \textbf{English} level C1~~~\textbf{Italian} level B2
+
+    \textbf{Spanish} level B1~~\textbf{Russian} level A2
+    }
+    
+    \customsidesection{Technical Skills}{
+    \begin{itemize}
+            \item \small{AI \& ML Engineering:} \footnotesize{\textbf{Python (95\%), PyTorch \& Lightning (95\%), Scientific Computing (90\%), Signal Processing (85\%), Acoustic Analysis (85\%)}}
+
+            \item \small{Research \& MLOps:} \footnotesize{\textbf{Hydra Configuration (85\%), Hugging Face (80\%), Experiment Tracking (85\%), Git \& Version Control (80\%), Docker (75\%)}}
+
+            \item \small{Systems \& Infrastructure:} \footnotesize{\textbf{SLURM/HPC (85\%), Multi-GPU Computing (80\%), Linux Systems (80\%), Cloud Computing (75\%)}}
+
+            \item \small{Other Skills:} \footnotesize{\textbf{Java (70\%), C/C++ (65\%), TypeScript/React (60\%)}}
+    \end{itemize}
+    }
+    
+    \par\vfill
+    %\makefooterprofile{Footer profile for page one.}{Footer profile row two with some more informations.}
+    
+}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% for some reason it's impossible to have a new line here...
+\mainsection{
+    
+    \section{Research Areas \& Key Achievements}
+    \begin{itemize}
+        \item \textbf{UAV/Drone Acoustic Detection:} Advanced signal processing \& deep learning for drone surveillance systems in defense applications
+        \item \textbf{Speech Processing \& Phonetics:} Self-supervised models (Wav2Vec 2.0, HuBERT) for phonemization \& pronunciation assessment 
+        \item \textbf{Publications:} Co-author VibraVox dataset (Speech Communication, 2025) + Master's thesis on intelligent speech transcription
+        \item \textbf{Multi-GPU HPC:} Experience with IDRIS Jean ZAY supercomputer for distributed training
+    \end{itemize}
+    
+    \section{Work experience}
+    
+    \begin{twenty}
+        \twentyitem
+            {2026-2027}
+            {\textbf{AI Research Consultant - French L2 Pronunciation Assessment}}
+            {Fonetix Association}
+            {
+            \begin{itemize}
+                \item Leading €23K, 12-month R\&D project for speech processing algorithms
+                \item Implementing phonemization \& prosodic analysis using Wav2Vec 2.0, HuBERT, AudioLM
+                \item Developing comprehensibility scoring for real-time educational feedback
+                \item Optimizing performance/computational cost for web integration
+            \end{itemize}
+            }
+            
+        \twentyitem
+            {Dec 2025 - Jan 2026}
+            {\textbf{Python Programming Instructor}}
+            {CNAM Paris}
+            {
+            \begin{itemize}
+                \item Teaching 25+ Master's students in Mechanical Engineering (16 hours intensive coursework)
+                \item Achieved 92\% student satisfaction with hands-on NumPy, Pandas, Matplotlib projects
+                \item Mentored 8 students through capstone projects (100\% completion rate)
+                \item Developed bilingual materials for 15\% international enrollment
+            \end{itemize}
+            }
+
+        \twentyitem
+            {Oct 2024 - Today}
+            {\textbf{AI Python Research Engineer - UAV Detection \& Classification}}
+            {CNAM Paris \& ISL}
+            {
+            \begin{itemize}
+                \item Deep learning research on drone detection, classification \& localization using acoustic modalities
+                \item Developing novel algorithms for multi-UAV signal disentanglement
+                \item Advanced signal processing \& ML for source separation
+                \item Research focus on acoustic-based surveillance systems for defense applications
+            \end{itemize}
+            }
+    
+      \twentyitem
+        {2023 - 2024}
+        {\textbf{Research assistant in EBEN project | VibraVox dataset [2]} \\from $8^{th}$ september 2023 to $22^{nd}$ january 2024}
+        {CNAM Paris}
+        {
+        \begin{itemize}
+            \item Acoustics experiments and recording sessions for data collection
+            \item Monitoring, quality control and consistency of collected data
+            \item Python speech transcription project based on the CNAM
+EBEN project (Pytorch, Pytorch Lightning, Hydra, Hugging Face). Use of a tokenizer, evaluation metrics (Word Error Rate, Character Error Rate, Phoneme Error Rate, CTC cost function, transformer architectures) for S2T and S2P ASR
+tasks
+            \item Handling of Whisper from open AI and wav2vec2-large-xlsr-
+53-english
+            \item Work integrated into the journal article presenting the
+VibraVox dataset [1]
+            \item High performance multi-GPU computation using IDRIS’ Jean
+ZAY supercomputer
+        \end{itemize}
+        }
+        
+      \twentyitem
+        {May - Aug 2023}
+        {\textbf{Technical Consultant Java}}
+        {BNP Paribas Paris}
+        {
+        \begin{itemize}
+            \item Maintained orchestrator \& ingestion pipelines with Gherkins/Cucumber testing
+            \item Documented accounting Information System specifications
+            \item Acquired business knowledge in accounting, finance, legal domains
+            \item Developed Teradata expertise for big data \& SQL optimization
+        \end{itemize}
+        }
+
+      \twentyitem
+        {Nov 2022 - Apr 2023}
+        {\textbf{DevOps Engineer \& FullStack Developer}}
+        {onepoint Montréal, Canada}
+        {
+        \begin{itemize}
+            \item Implemented QA tests in GitLab/Jenkins pipeline for National Bank of Canada Connect Building software
+            \item FullStack development using Java/Quarkus/Maven \& TypeScript/React
+            \item Part-time role while completing studies
+        \end{itemize}
+        }
+
+      \twentyitem
+        {Jun - Aug 2022}
+        {\textbf{FullStack Developer}}
+        {onepoint Montréal, Canada}
+        {
+        \begin{itemize}
+            \item Developed Connect Building software for National Bank of Canada \& Espace Montmorency
+            \item Agile development with Jira, Figma, Confluence specifications
+            \item UAT \& production deployment on AWS Cloud infrastructure
+        \end{itemize}
+        }
+
+      \twentyitem
+        {2019-2021}
+        {\textbf{Business Analyst}}
+        {Banque de France, Courbevoie}
+        {
+        \begin{itemize}
+            \item Processed tax forms quotation \& data correction
+            \item Computed France's balance of payment \& international investment position
+            \item 3 summer internships (2019, 2020, 2021) demonstrating consistent performance
+        \end{itemize}
+        }
+        
+    \end{twenty}
+
+}
+
+%% end main section
+
+\end{document}

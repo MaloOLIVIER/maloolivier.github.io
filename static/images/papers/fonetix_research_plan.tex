@@ -1,0 +1,324 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage[square,numbers,round]{natbib}
+\usepackage{url}
+\usepackage{float}
+\usepackage{adjustbox}
+ 
+% Page geometry
+\geometry{
+    left=2.5cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=3cm
+}
+
+\definecolor{BLUE}{HTML}{4169E1}
+
+% Header and footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\textcolor{BLUE}{\textbf{Fonetix - Plan de recherche}}}
+\fancyhead[R]{\textcolor{BLUE}{\today}}
+\fancyfoot[C]{\thepage}
+
+% Title formatting
+\titleformat{\section}
+  {\Large\bfseries\color{BLUE}}
+  {\thesection}
+  {1em}
+  {}
+
+\titleformat{\subsection}
+  {\large\bfseries\color{BLUE}}
+  {\thesubsection}
+  {1em}
+  {}
+
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=BLUE,
+    urlcolor=BLUE!90,
+    citecolor=BLUE!90
+}
+
+\begin{document}
+
+% Custom title page
+\begin{titlepage}
+    \centering
+    
+    % Logo space (if you have one)
+    \vspace{2cm}
+    
+    % Main title
+    {\Huge\bfseries\color{BLUE} Devis 202507-1}
+    
+    \vspace{0.5cm}
+    {\Large Plan de recherche et tarification}
+    
+    \vspace{0.3cm}
+    {\large Conception et développement d'un algorithme d'évaluation \\
+    de la prononciation du Français L2}
+
+    \vspace{0.8cm}
+    {Émis le \today \\}
+    \vspace{0.2cm}
+    {Valide jusqu'au 30 août 2025}
+    
+    \vspace{3cm}
+    
+    % Author information
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \textbf{\Large Proposé par :}
+        
+        \vspace{0.5cm}
+        \textbf{Malo Olivier EI}\\
+        \textit{Entrepreneur Individuel}\\
+        SIREN : 897870069\\
+        Code APE : 6201Z
+        
+        \vspace{0.3cm}
+        100 Rue de la Porte de TRIVAUX\\
+        92140 CLAMART\\
+        Tél : 06 01 45 61 19\\
+        Email : \href{mailto:MaloOlivier333@gmail.com}{MaloOlivier333@gmail.com}
+    \end{minipage}
+    
+    \vspace{2cm}
+    
+    % Client information
+    \begin{minipage}{0.8\textwidth}
+        \centering
+        \textbf{\Large Pour :}
+        
+        \vspace{0.5cm}
+        \textbf{Fonetix}\\
+        \textit{Association}\\
+        SIREN : 844096883
+        
+        \vspace{0.3cm}
+        5 Impasse NEGRENEYS\\
+        31200 TOULOUSE\\
+        Représentée par : Laure Fesquet / Sébastien Palusci
+    \end{minipage}
+    
+    \vfill
+    
+    % Date
+    {\large \today}
+    
+\end{titlepage}
+
+% Table of contents
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+Ce document présente le plan de recherche et la proposition tarifaire pour le développement d'un algorithme d'évaluation de la prononciation du Français L2. \newline
+Ce plan de recherche vise à développer un algorithme d'évaluation automatique de la prononciation du Français L2, répondant aux besoins de Fonetix, une association de professeurs de FLE spécialisés dans la correction phonétique via la Méthode Verbo-Tonale. Le système aura deux fonctions principales :
+\begin{enumerate}
+    \item Une segmentation syllabique précise et une transcription phonétique des productions des apprenants.
+    \item Un score de compréhensibilité offrant un retour pertinent aux apprenants.
+\end{enumerate}
+
+
+\subsection{Contexte du projet}
+
+Fonetix est une association qui offre aux professeurs et aux apprenants de Français Langue Étrangère (FLE) la possibilité de poursuivre l'apprentissage de la langue, et notamment de sa prononciation, à domicile. Pour ce faire, Fonetix propose via son application web (\url{fonetix.org}) une série d'exercices sélectionnés par les professeurs. Ces exercices s'appuient sur la \textbf{Méthode Verbo-Tonale} pour enseigner la prosodie — c'est-à-dire le rythme, l'accentuation et l'intonation de la langue. L'objectif principal est d'approfondir, voire de maîtriser, cette dimension de la langue afin d'améliorer la clarté de la prononciation et la compréhensibilité de la parole des apprenants, sans nécessairement insister sur la syntaxe ou la grammaire de leurs discours.
+Selon \cite{borrell2002didactique}, l'importance de la prosodie dans l'enseignement et l'apprentissage d'une langue étrangère est un fait largement admis par les spécialistes du domaine. Pour les apprenants du français, une maîtrise approfondie de la prosodie est non seulement bénéfique, mais essentielle pour une communication efficace et naturelle. La prosodie, qui englobe le rythme, l'intonation et l'accentuation, joue en effet un rôle fondamental dans la compréhension et la production du sens.
+
+\subsection{Objectifs}
+En tant que prestataire auprès de l'association Fonetix, je souhaite donner une liste itérative des objectifs afin de proposer une tarification adaptée aux besoins, aux ambitions et aux ressources de Fonetix.
+La proposition suivante fonctionne en \textit{gammes de tarification} mais également en étapes successives de recherche tel qu'il est nécessaire d'établir une \textit{baseline} aux premières étapes de la recherche afin de pouvoir comparer les scores de performances et autres métriques obtenus aux étapes ultérieures du développement et ainsi proposer des algorithmes répondant aux exigences de Fonetix et à leurs besoins.
+La liste des objectifs est la suivante :
+\begin{enumerate}[leftmargin=1.5cm]
+    \item Concevoir et développer un phonémiseur Français et un algorithme de segmentation syllabique et ainsi établir une \textit{baseline}. Proposer un score de compréhensibilité
+    \item Proposer un premier modèle d'analyse prosodique simple (e.g. durée, intensité des intonations, intonations montante, descendante ...)
+    \item Approfondir sur le modèle d'analyse prosodique, et proposer un algorithme complet de phonémisation, de segmentation syllabique et d'analyse prosodique du Français
+\end{enumerate}
+
+Un objectif complémentaire est également d'optimiser le \textit{tradeoff} entre la performance du modèle et son coût computationnel puisque cet algorithme doit être intégré au \textit{backend} de l'application web \url{fonetix.org}.
+
+\section{Méthodologie de recherche}
+\subsection{Objectif premier : conception d'une \textit{baseline} de phonémisation, de segmentation syllabique et d'un score de compréhensibilité}
+Le premier objectif de cette recherche est d'établir une base de référence robuste pour la phonémisation, la segmentation syllabique et l'évaluation de la compréhensibilité de la parole en Français L2. Pour ce faire, je m'appuyerai sur les travaux réalisés par Johann Audoye \cite{audoye2025fonetix}, en intégrant et en évaluant plusieurs outils et modèles qu'il a utilisés. Cette approche visera à jeter les fondations des étapes futures de la recherche. \newline
+
+Je reprendrai les outils et modèles suivants :
+\begin{itemize}
+    \item le phonémiseur français \cite{lmssc-wav2vec2-base-phonemizer-french_2023}
+    \item le modèle Whisper \cite{radford2022robustspeechrecognitionlargescale}
+    \item le modèle Sylber \cite{cho2025sylbersyllabicembeddingrepresentation}
+    \item le logiciel PRAAT \cite{deJong04072021}
+    \item le corpus annoté de Fonetix fourni avec les travaux de Johann Audoye
+\end{itemize}
+
+La mise en oeuvre rigoureuse des outils et des modèles mentionnés, et la génération de scores pour une \textit{baseline} solide me permettra de valider les modèles et métriques pertinents et d'orienter la suite de mes recherches.
+
+\subsection{Deuxième objectif : proposer un modèle d'analyse prosodique}
+Au cours de mes recherches préliminaires, il a été établi que les modèles acoustiques récents, notamment ceux basés sur l'apprentissage auto-supervisé (\textit{Self-Supervised Learning} - SSL) comme Wav2Vec 2.0 \cite{baevski2020wav2vec20frameworkselfsupervised} et HuBERT \cite{hsu2021hubertselfsupervisedspeechrepresentation}, ainsi que des architectures génératives telles qu'AudioLM \cite{borsos2023audiolmlanguagemodelingapproach} , sont intrinsèquement capables de représenter des informations prosodiques au sein de leurs embeddings latents. \newline 
+
+L'objectif de cette section n'est donc pas de concevoir un nouveau modèle de représentation prosodique, mais plutôt d'exploiter l'information prosodique déjà encodée dans les couches de ces modèles existants via un modèle \textit{downstream} dédié.
+
+Je vais reprendre les modèles déjà existants et étudier leur capacité à retenir l'information prosodique :
+\begin{enumerate}
+    \item \textbf{AudioLM}: Ce \textit{framework} de génération audio opère en transformant l'audio en une séquence de tokens discrets, abordant la génération comme une tâche de modélisation linguistique dans cet espace de représentation. Il utilise une approche de tokenisation hybride, distinguant les tokens sémantiques – dérivés de modèles de langage masqués pré-entraînés sur l'audio (w2v-BERT \cite{chung2021w2vbertcombiningcontrastivelearning}) – qui capturent la structure à long terme, y compris la syntaxe linguistique, le contenu sémantique et la prosodie du discours, et les tokens acoustiques – produits par un codec audio neuronal (SoundStream \cite{zeghidour2021soundstreamendtoendneuralaudio}) – qui permettent une synthèse de haute qualité et la capture des détails de la forme d'onde. \newline
+    
+    Les caractéristiques prosodiques sont majoritairement capturées par les tokens sémantiques, avec une contribution complémentaire des tokens acoustiques, permettant à AudioLM de générer des continuations de discours cohérentes tout en maintenant l'identité du locuteur et la prosodie des locuteurs non vus durant l'entraînement. \cite{borsos2023audiolmlanguagemodelingapproach} \newline
+
+    \item \textbf{Wav2Vec 2.0} et \textbf{HuBERT}: Ces modèles SSL sont reconnus pour leur capacité à apprendre des représentations générales à partir de données audio non étiquetées.
+    \begin{itemize}
+        \item Wav2Vec 2.0 utilise une tâche contrastive pour distinguer les représentations latentes quantifiées et masquées de la forme d'onde brute, capturant des informations liées aux phonèmes. Il s'est avéré efficace pour l'identification du locuteur et la reconnaissance linguistique. \cite{fan2021exploringwav2vec20speaker} \newline
+
+        HuBERT, de son côté, utilise un clustering hors ligne pour générer des étiquettes cibles alignées pour une tâche de prédiction de type BERT sur des régions masquées. Cela l'oblige à apprendre des représentations contextuelles et à saisir les relations temporelles à long terme. \cite{hsu2021hubertselfsupervisedspeechrepresentation} \newline
+        
+        \item Les modèles SSL démontrent une forte utilité pour les tâches liées à la prosodie. Ils montrent de bonnes performances dans la reconstruction de la prosodie (hauteur fondamentale (f0) et énergie) et la prédiction future de la prosodie \cite{lin2022utilityselfsupervisedmodelsprosodyrelated} mais présentent toutefois des limitations. Ils peuvent parfois privilégier les variations locales ou sémantiques. \cite{qu2023disentanglingprosodyrepresentationsunsupervised} Il a été observé que le fine-tuning de Wav2Vec 2.0 pour la tâche de reconnaissance automatique de la parole (ASR) peut entraîner une perte d'informations utiles pour la reconnaissance des émotions, suggérant que les objectifs d'entraînement peuvent biaiser les représentations générées. \cite{wang2022finetunedwav2vec20hubertbenchmark} \cite{pepino2021emotionrecognitionspeechusing} \newline
+        
+    \end{itemize}
+\end{enumerate}
+
+Ensuite, je devrai concevoir un modèle \textit{downstream} pour extraire l'information prosodique pertinente des couches du modèle. \newline
+
+L'analogie avec l'exploitation des informations lexicales via des tâches d'ASR s'applique ici : il est essentiel de définir un modèle \textit{downstream} et une tâche d'exploitation spécifique pour accéder et utiliser efficacement l'information prosodique déjà contenue dans ces représentations profondes. Ces représentations sont typiquement extraites des couches intermédiaires des modèles SSL et sont ensuite traitées par des modules plus légers adaptés aux tâches spécifiques -- à définir.
+
+Voici quelques exemples de modèles \textit{downstream} et de leurs tâches spécifiques associées :
+\begin{enumerate}
+    \item \textit{Speech Emotion Recognition} (SER) : Les modèles adaptés fine-tunés basés sur Wav2Vec 2.0 et HuBERT atteignent des performances de pointe dans cette tâche, démontrant leur capacité à capturer des représentations prosodiques pertinentes pour l'émotion. \cite{pepino2021emotionrecognitionspeechusing} De plus, des travaux comme Prosody2Vec \cite{qu2023disentanglingprosodyrepresentationsunsupervised} ont montré que l'intégration d'un encodeur prosodique dédié, complémentaire aux représentations de HuBERT, peut même surpasser les méthodes de l'état de l'art pour le SER. \newline
+
+    \item \textit{Mispronunciation Detection and Diagnosis} (MDD) : Les modèles basés sur Wav2Vec 2.0, même après fine-tuning, peuvent être utilisés pour détecter les erreurs de prononciation. La performance de reconnaissance phonémique de ces modèles est corrélée avec la perception humaine de l'accentuation et de l'intelligibilité, bien que l'accentuation soit également influencée par des facteurs prosodiques dépassant les erreurs phonétiques segmentales. \cite{kheir2023automaticpronunciationassessment} \newline
+
+    \item Organisation syllabique : SD-HuBERT \cite{cho2025sdhubertsentencelevelselfdistillationinduces}, une version fine-tunée de HuBERT, est capable d'induire une organisation syllabique dans les représentations de la parole sans supervision externe. Des modèles ultérieurs comme Sylber \cite{cho2025sylbersyllabicembeddingrepresentation} ont encore amélioré cette capacité, offrant des structures syllabiques claires et robustes ainsi qu'une tokenisation syllabique efficace. Ces unités syllabiques sont considérées comme des unités "phonologiquement ancrées" du discours.
+    
+\end{enumerate}
+
+En définitive, je vais devoir définir précisément une tâche \textit{downstream} et concevoir l'architecture du modèle associé qui permettra d'extraire et de manipuler les informations prosodiques pertinentes déjà contenues dans ces représentations profondes.
+
+\subsection{Dernier objectif : approfondir le modèle prosodique et aborder une intégration holistique}
+En dernier objectif, je proposerais d'aller plus loin en créant un modèle prosodique plus sophistiqué en m'inspirant des travaux existants sur la représentation particulière de couches prosodiques et de hiérarchisation des tokens :
+\begin{itemize}
+    \item \textbf{De l'apprentissage de représentations prosodiques décomposées} \cite{qu2023disentanglingprosodyrepresentationsunsupervised} :
+    Le premier axe de cette modélisation avancée de la prosodie s'appuiera sur le modèle Prosody2Vec, un système auto-supervisé conçu pour apprendre des représentations prosodiques décomposées. Ce modèle a pour objectif de capturer les variations de style de parole et les états émotionnels sans nécessiter d'annotations humaines ou de transcriptions textuelles. L'architecture de Prosody2Vec intègre un encodeur d'unités pour séparer les informations paralinguistiques du contenu sémantique de la parole et -- en parallèle -- un encodeur prosodique entraînable apprend les informations prosodiques globaux ou au niveau de l'énoncé. \newline
+    
+    Les résultats expérimentaux ont démontré que Prosody2Vec capture efficacement des caractéristiques prosodiques générales transférables à d'autres discours émotionnels et qu'il est complémentaire aux modèles de représentation de la parole établis tels que Wav2Vec2 et HuBERT, permettant de surpasser l'état de l'art pour la reconnaissance d'émotions vocales (SER) lorsqu'il est combiné avec HuBERT. \newline
+    Dans notre cas d'utilisation, je peux utiliser ce \textit{framework} pour l'extraction et l'exploitation de caratéristiques plus fines -- comme l'intonation montante ou descendante en fin de phrase --, ou pour une tâche d'évaluation de la prosodie de l'apprenant par rapport à une prosodie \textit{target}. \newline
+
+    \item \textbf{De la hiérarchisation des tokens} \cite{borsos2023audiolmlanguagemodelingapproach} : Bien que ce modèle ait été initialement conçu pour la génération audio. AudioLM repose sur une approche hiérarchique qui combine deux types de tokens : les tokens sémantiques et les tokens acoustiques. \cite{borsos2023audiolmlanguagemodelingapproach} montrent que l'information prosodique est capturé principalement par les tokens sémantiques avec une participation moindre des tokens acoustiques. Cette architecture pourrait ainsi inspirer le développement d'un modèle d'analyse capable d'isoler et d'évaluer la cohérence prosodique des apprenants en se basant sur cette décomposition explicite des informations. \newline
+\end{itemize}
+
+Quant au score de compréhensibilité, des métriques prosodiques -- telles que le rythme \cite{astesano2016accentuation}, la réalisation des contours intonatifs \cite{simon2016frontieres} et la force perçue des frontières prosodiques \cite{simon2016frontieres} --, si extraites correctement, peuvent servir à pondérer le score et apporter une information englobante sur l'accentuation, le rythme et l'intonation du locuteur. En somme, un score de compréhensibilité pondéré offrirait un diagnostic plus complet pour les apprenants en Français L2. \newline
+
+Enfin, j'intègrerai le modèle de phonémisation et de segmentation syllabique avec le modèle prosodique et j'optimiserai le \textit{tradeoff} performances / coût computationnel en vue d'une intégration de l'algorithme final dans l'application web \url{fonetix.org}.
+
+\section{Livrables attendus}
+\subsection*{Livrables par objectif}
+\textbf{Objectif 1} :
+\begin{itemize}
+    \item Algorithme phonémiseur livré en open-source \cite{lmssc-wav2vec2-base-phonemizer-french_2023}
+    \item Algorithme de segmentation syllabique livré en open-source
+    \item Algorithme de score de compréhensibilité livré en open-source
+    \item Rapport de performance \textit{baseline} \newline
+\end{itemize}
+
+\textbf{Objectif 2} :
+\begin{itemize}
+    \item Algorithme d'analyse prosodique livré en open-source
+    \item Rapport de comparaison des performances par rapport à la \textit{baseline} \newline
+\end{itemize}
+
+\textbf{Objectif 3} :
+\begin{itemize}
+    \item Algorithme intégré prêt pour intégration à l'application web
+    \item Score de compréhensibilité amélioré
+    \item Rapport de performance / \textit{benchmarks} de performance \newline
+\end{itemize}
+
+\section{Planning et \textit{milestones}}
+Il convient de préciser que ma disponibilité s'inscrit dans le cadre d'un \textbf{temps partiel}, correspondant à \textbf{deux journées de travail hebdomadaires} (soit 16 heures par semaine), ce qui représente une capacité de travail mensuelle de 8 journées (64 heures par mois).
+
+\begin{itemize}
+    \item Option A - Objectif 1 uniquement : \newline
+            Durée : 1 mois \newline
+            Date de début : À définir après signature \newline
+            \textbf{Date de livraison} : 1 mois après démarrage \newline
+
+    \item Option B - Objectifs 1 + 2 : \newline
+            Durée : 1 + 8 mois = 9 mois \newline
+            Date de début : À définir après signature \newline
+            \textbf{Date de livraison} : 1 + 8 mois = 9 mois après démarrage \newline
+
+    \item Option C - Projet complet (Objectifs 1 + 2 + 3) : \newline
+            Durée : 1 + 8 + 3 mois = 12 mois \newline
+            Date de début : À définir après signature \newline
+            \textbf{Date de livraison} : 1 + 8 + 3 mois = 12 mois après démarrage \newline
+
+\end{itemize}
+
+\section{Proposition tarifaire}
+
+\begin{table}[H]
+    \centering
+    \begin{adjustbox}{width=1.05\textwidth}
+        \begin{tabular}{l|c|c|r}
+        \textbf{Objectif} & \textbf{Nombre de jours}& \textbf{Taux journalier HT}& \textbf{Montant HT} \\
+        Objectif 1 : \textit{Baseline} phonémisation / segmentation& 8 j (1 mois)& 240,00 €& 1 920,00 €\\
+        Objectif 2 : Modèle d'analyse prosodique & 64 j (8 mois)& 240,00 €& 15 360,00 €\\
+        Objectif 3 : Intégration holistique et optimisation & 24 j (3 mois)& 240,00 €& 5 760,00 €\\
+        \hline
+        \textbf{Total} & \textbf{96 j}& & \textbf{23 040,00 €}\\
+        \end{tabular}
+    \end{adjustbox}
+    \caption{Décomposition tarifaire par objectif}
+    \label{tab:tarification}
+\end{table}
+
+\subsection*{Tarification modulaire}
+\begin{itemize}
+    \item Option A - Objectif 1 uniquement : \newline
+            Montant HT : 1 920,00 € \newline
+            TVA non applicable \newline
+            \textbf{Total TTC : 1 920,00 €} \newline
+
+    \item Option B - Objectifs 1 + 2 : \newline
+            Montant HT : 17 280,00 € \newline
+            TVA non applicable \newline
+            \textbf{Total TTC : 17 280,00 €} \newline
+
+    \item Option C - Projet complet (Objectifs 1 + 2 + 3) : \newline
+            Montant HT : 23 040,00 € \newline
+            TVA non applicable \newline
+            \textbf{Total TTC : 23 040,00 €} \newline
+
+\end{itemize}
+
+\section*{Termes et conditions}
+Ce devis concerne uniquement de la prestation de service. \newline
+TVA non applicable, article 293 B du Code Général des Impôts. \newline
+\newline
+\newline
+
+\noindent\fbox{%
+    \parbox{\textwidth}{%
+        Bon pour accord. \newline \newline \newline
+        Signé le : \newline \newline
+        À : 
+    }%
+}
+
+\newpage
+% Bibliography
+\bibliographystyle{apalike}
+\bibliography{citations}
+
+\end{document}
