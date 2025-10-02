@@ -389,7 +389,7 @@ const Resume: React.FC = () => {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
-                                    AI Python Research Engineer - UAV Detection & Classification
+                                    AI Python Research Engineer - UAV Classification & Localization
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -712,7 +712,7 @@ const Resume: React.FC = () => {
                             <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
                                 <Grid size={{ xs: 6, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
-                                        Python Programming Instructor
+                                        Python Programming Teacher
                                     </Typography>
                                 </Grid>
                                 <Grid>
@@ -1145,7 +1145,7 @@ const Resume: React.FC = () => {
                         UAV/Drone Acoustic Detection
                     </Typography>
                     <Typography fontFamily={'Roboto'} variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
-                        Advanced signal processing techniques for drone detection using acoustic signatures and deep learning models
+                        Advanced signal processing techniques for drone detection, classification & localization using acoustic signatures and deep learning models
                     </Typography>
                     
                     <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
