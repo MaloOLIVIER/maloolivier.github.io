@@ -118,10 +118,13 @@ const Resume: React.FC = () => {
                         Resume
                     </Typography>
                     <Typography variant="h4" gutterBottom fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 400 }}>
-                        Master of Science in Computing Sciences
+                        AI Python Research Engineer
                     </Typography>
-                    <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 400, mb: 8 }}>
-                        Research Engineer at Conservatoire National des Arts et Métiers, LMSSC - Paris
+                    <Typography variant="h4" fontFamily={'Roboto'} sx={{ color: "#4169E1", fontWeight: 400, mb: 2 }}>
+                        Deep Learning Research on UAV Detection, Classification & Localization
+                    </Typography>
+                    <Typography variant="h6" fontFamily={'Roboto'} sx={{ color: "#666", fontWeight: 300, mb: 8 }}>
+                        Conservatoire National des Arts et Métiers, LMSSC - Paris
                     </Typography>
 
                     <Grid container spacing={2} columns={12} mb={0}>
@@ -329,6 +332,54 @@ const Resume: React.FC = () => {
                         <TimelineItem>
                             <TimelineOppositeContent>
                                 <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
+                                    2026 - 2027
+                                </Typography>
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <WorkIcon sx={{ color: '#4169E1' }} />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
+                                    AI Research Consultant - Speech Processing
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineOppositeContent>
+                                <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
+                                    Q1 2026
+                                </Typography>
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <SchoolIcon sx={{ color: '#4169E1' }} />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
+                                    AWS Cloud & AI Practitioner Certificates
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineOppositeContent>
+                                <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
+                                    December 2025 - January 2026
+                                </Typography>
+                            </TimelineOppositeContent>
+                            <TimelineSeparator>
+                                <SchoolIcon sx={{ color: '#4169E1' }} />
+                                <TimelineConnector />
+                            </TimelineSeparator>
+                            <TimelineContent>
+                                <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
+                                    Python Programming Teacher at CNAM
+                                </Typography>
+                            </TimelineContent>
+                        </TimelineItem>
+                        <TimelineItem>
+                            <TimelineOppositeContent>
+                                <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
                                     Since October 2024
                                 </Typography>
                             </TimelineOppositeContent>
@@ -338,7 +389,7 @@ const Resume: React.FC = () => {
                             </TimelineSeparator>
                             <TimelineContent>
                                 <Typography variant="body2" color="#4169E1" fontFamily={'Roboto'} sx={{ fontWeight: 'bold' }}>
-                                    AI Research Engineer at CNAM, ISL
+                                    AI Python Research Engineer - UAV Classification & Localization
                                 </Typography>
                             </TimelineContent>
                         </TimelineItem>
@@ -514,7 +565,7 @@ const Resume: React.FC = () => {
                             <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
                                 <Grid size={{ xs: 6, md: 6 }}>
                                     <Typography variant="h6" fontFamily={'Roboto'}>
-                                        AI Research Engineer
+                                        AI Python Research Engineer - UAV Detection, Classification & Localization
                                     </Typography>
                                 </Grid>
                                 <Grid>
@@ -534,7 +585,163 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Keep updated!
+                                            Deep learning research on drone/UAV detection, classification, and localization using acoustic modalities
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Developing novel deep learning algorithms to disentangle multiple UAV signals from complex acoustic environments
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Advanced signal processing and machine learning for multi-UAV source separation and identification
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Research focus on acoustic-based drone surveillance systems for defense and security applications
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Publication and presentation of research findings in top-tier conferences and journals
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                            </List>
+                        </AccordionDetails>
+                    </Accordion>
+
+                    <Accordion>
+                        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                            <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
+                                <Grid size={{ xs: 6, md: 6 }}>
+                                    <Typography variant="h6" fontFamily={'Roboto'}>
+                                        AI Research Consultant - French L2 Pronunciation Assessment
+                                    </Typography>
+                                </Grid>
+                                <Grid>
+                                    <Grid container alignItems="center">
+                                        <PlaceIcon sx={{ color: "#4169E1" }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1", ml: 1 }}>
+                                            Fonetix Association
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <List>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Leading a <b>12-month</b> R&D project (€23K) to develop advanced speech processing algorithms for French L2 pronunciation evaluation
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Implementing phonemization and syllabic segmentation algorithms using self-supervised models (Wav2Vec 2.0, HuBERT, AudioLM)
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Developing prosodic analysis models for rhythm, intonation, and accentuation assessment in French speech
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Creating comprehensibility scoring algorithms for language learning applications with real-time feedback
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Optimizing performance/computational cost tradeoffs for web application integration and scalable deployment
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Delivering open-source algorithms and comprehensive performance benchmarks for educational technology applications
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                            </List>
+                        </AccordionDetails>
+                    </Accordion>
+
+                    <Accordion>
+                        <AccordionSummary expandIcon={<ExpandMoreIcon />}>
+                            <Grid container spacing={2} columns={12} alignItems="center" justifyContent="space-between" width="100%">
+                                <Grid size={{ xs: 6, md: 6 }}>
+                                    <Typography variant="h6" fontFamily={'Roboto'}>
+                                        Python Programming Teacher
+                                    </Typography>
+                                </Grid>
+                                <Grid>
+                                    <Grid container alignItems="center">
+                                        <PlaceIcon sx={{ color: "#4169E1" }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'} sx={{ color: "#4169E1", ml: 1 }}>
+                                            CNAM Paris
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <List>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Teaching Python programming fundamentals to <b>25+</b> Master's students in Mechanical Engineering
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Designed and delivered <b>30 hours</b> of intensive coursework covering NumPy and Matplotlib for engineering applications
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -567,7 +774,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Acoustics experiments and recording sessions for data collection
+                                            Developed and deployed wav2vec2-french-phonemizer model achieving <b>4.2% PER</b> on French speech recognition, generating <b>180,000+ downloads (46,000+ monthly)</b> on HuggingFace platform
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -576,7 +783,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Monitoring, quality control and consistency of collected data
+                                            Built VibraVox dataset comprising <b>45+ hours</b> of synchronized 6-channel audio from 188 participants across 5 body-conduction sensors, resulting in <b>139,000+ downloads (29,000+ monthly)</b> for speech research applications
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -585,8 +792,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Python speech transcription project based on the CNAM EBEN project (Pytorch, Pytorch Lightning, Hydra, Hugging Face).
-                                            Use of a tokenizer, evaluation metrics (Word Error Rate, Character Error Rate, Phoneme Error Rate, CTC cost function, transformer architectures) for S2T and S2P ASR tasks
+                                            Engineered production-ready ASR training pipeline using PyTorch Lightning, Hydra, and TensorBoard, enabling fine-tuning of transformer-based models with DDP multi-GPU support on Jean ZAY supercomputer
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -595,7 +801,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Handling of Whisper from open AI and wav2vec2-large-xlsr-53-english
+                                            Implemented automated data quality filtering using Voice Activity Detection and energy-based metrics, processing <b>30,568 initial recordings</b> and retaining <b>28,471 high-quality samples</b> (93.1% retention rate)
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -604,7 +810,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Work integrated into the journal article presenting the VibraVox dataset
+                                            Conducted experimental data collection protocol recording <b>200 participants</b> using 6 microphones simultaneously in controlled acoustic environments with 5th-order ambisonic spatialization
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -613,7 +819,25 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            High performance multi-GPU computation using IDRIS' Jean ZAY supercomputer
+                                            Optimized speech recognition models using trapezoidal learning rate scheduling and transformer layer freezing strategies from wav2vec 2.0 research, achieving <b>6.4% PER</b> on reference microphone test set
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Contributed to EBEN (Extreme Bandwidth Extension Network) speech enhancement research for body-conduction microphones, supporting ongoing doctoral research in degraded speech restoration
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Collaborated using Agile methodology with PhD candidate and professor, delivering project milestones ahead of schedule and co-authoring scientific article for peer-reviewed publication
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -849,79 +1073,147 @@ const Resume: React.FC = () => {
 
             <Divider />
 
-            <Typography fontFamily={'Roboto'} variant="h6">Programming languages and Skills</Typography>
+            <Typography fontFamily={'Roboto'} variant="h6">Research Expertise and Technical Skills</Typography>
             <Grid container spacing={2} columns={12} >
                 <Grid size={{ xs: 4, md: 4 }}>
 
-                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Development</Typography>
+                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">AI & ML Engineering</Typography>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={95} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Python & ML Libraries</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={95} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>PyTorch & Lightning</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                         <StaticCircularProgress value={90} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Java</Typography>
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Scientific Computing</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={80} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>C</Typography>
+                        <StaticCircularProgress value={85} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Signal Processing</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={80} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>C++</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={70} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>TypeScript</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={70} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>React</Typography>
+                        <StaticCircularProgress value={85} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Acoustic Analysis</Typography>
                     </Box>
                 </Grid>
                 <Grid size={{ xs: 4, md: 4 }}>
 
-                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Data Processing & Deep Learning</Typography>
+                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Research & MLOps</Typography>
 
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={95} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Python</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={90} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Pytorch</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={90} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Pytorch Lightning</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={80} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Hydra</Typography>
+                        <StaticCircularProgress value={85} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Hydra Configuration</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                         <StaticCircularProgress value={80} size={40} />
                         <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Hugging Face</Typography>
                     </Box>
-                </Grid>
-                <Grid size={{ xs: 4, md: 4 }}>
-
-                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Frameworks & Execution Environment</Typography>
-
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={80} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Maven</Typography>
+                        <StaticCircularProgress value={85} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Experiment Tracking</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                         <StaticCircularProgress value={80} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Quarkus</Typography>
-                    </Box>
-                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
-                        <StaticCircularProgress value={70} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Hypersistence</Typography>
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Git & Version Control</Typography>
                     </Box>
                     <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
                         <StaticCircularProgress value={75} size={40} />
-                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Node.js</Typography>
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Docker & Containers</Typography>
                     </Box>
+                </Grid>
+                <Grid size={{ xs: 4, md: 4 }}>
 
+                    <Typography fontFamily={'Roboto'} sx={{ mb: 3, fontWeight: 'bold' }} variant="body2">Systems & Infrastructure</Typography>
+
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={85} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>SLURM/HPC Systems</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Multi-GPU Computing</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Linux Systems</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={75} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>Cloud Computing</Typography>
+                    </Box>
+                    <Box sx={{ display: 'flex', alignItems: 'center', mb: 2 }}>
+                        <StaticCircularProgress value={80} size={40} />
+                        <Typography fontFamily={'Roboto'} variant="body1" sx={{ ml: 2 }}>SSH & Remote Work</Typography>
+                    </Box>
+                    
+                </Grid>
+            </Grid>
+
+            <Divider />
+
+            <Typography fontFamily={'Roboto'} variant="h6" mb={2}>Research Areas & Expertise</Typography>
+            <Grid container spacing={2} columns={12}>
+                <Grid size={{ xs: 12, md: 6 }}>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
+                        UAV/Drone Acoustic Detection
+                    </Typography>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                        Advanced signal processing techniques for drone detection, classification & localization using acoustic signatures and deep learning models
+                    </Typography>
+                    
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
+                        Multi-Source Separation
+                    </Typography>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                        Novel algorithms for disentangling multiple UAV signals from complex acoustic environments
+                    </Typography>
+
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
+                        Deep Learning for Audio
+                    </Typography>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                        Transformer architectures, CNNs, and RNNs applied to acoustic classification and localization tasks
+                    </Typography>
+
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
+                        Speech Processing & Phonetics
+                    </Typography>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                        Self-supervised learning models (Wav2Vec 2.0, HuBERT) for phonemization, prosodic analysis, and pronunciation assessment
+                    </Typography>
+                </Grid>
+                <Grid size={{ xs: 12, md: 6 }}>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
+                        Defense & Security Applications
+                    </Typography>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                        Development of surveillance systems for critical infrastructure protection and airspace monitoring
+                    </Typography>
+
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
+                        High-Performance Computing
+                    </Typography>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                        Expertise in distributed training on multi-GPU clusters and supercomputing environments
+                    </Typography>
+
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
+                        Educational Technology & NLP
+                    </Typography>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ mb: 2, color: 'text.secondary' }}>
+                        AI-powered language learning applications, pronunciation evaluation, and comprehensibility scoring systems
+                    </Typography>
+
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ fontWeight: 'bold', mb: 1 }}>
+                        Research Publications
+                    </Typography>
+                    <Typography fontFamily={'Roboto'} variant="body2" sx={{ color: 'text.secondary' }}>
+                        Contributing to cutting-edge research in acoustic AI, UAV detection, and speech processing with peer-reviewed publications
+                    </Typography>
                 </Grid>
             </Grid>
 

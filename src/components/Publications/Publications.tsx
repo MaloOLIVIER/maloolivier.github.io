@@ -82,6 +82,30 @@ export function Author({ authors, date }: { authors: { name: string; avatar: str
 
 export const cardData = [
     {
+        img: '/static/images/content/french_phonemizers.png',
+        tag: 'Wav2Vec2 ; Speech-to-Phoneme ; Common Voice ; Speech recognition.',
+        title: 'wav2vec2-french-phonemizer : A French Speech to Phoneme Model based on Wav2Vec2 with 200k+ downloads on HuggingFace',
+        description:
+            `🔗 wav2vec2-french-phonemizer | <b>46,000+ Downloads last month !</b>
+             A production-ready French phonemizer that converts speech into phonetic transcriptions. Built by fine-tuning Wav2Vec2 on French speech data, this model breaks down spoken language into its fundamental sound units (phonemes).
+             
+             • <b>PER</b> : <b>5.52 %</b> on Common Voice v13 (French) and <b>4.36 %</b> on Multilingual Librispeech (French)
+             • <b>46,000+ downloads</b> last month, <b>180k+ total</b>
+             • <b>Real-time</b> inference on consumer hardware
+             • Open source and available on <b>HuggingFace</b> Model Hub
+
+             Used by researchers and production teams worldwide for French speech processing applications. Developed in collaboration with <b>CNAM LMSSC</b>.
+
+             <b>Technical stack</b> : Wav2Vec2 <b>•</b> PyTorch <b>•</b> HuggingFace Transformers <b>•</b> Python <b>•</b> Speech Processing
+             `,
+        authors: [
+            { name: 'Malo Olivier', avatar: '/static/images/avatar/malo.jpg' },
+            { name: 'Julien Hauret', avatar: '/static/images/avatar/julien.jpg' },
+            { name: 'Éric Bavu', avatar: '/static/images/avatar/eric.jpg' },
+        ],
+        date: "April 30, 2025",
+    },
+    {
         img: '/static/images/content/vibravox_sensors.png',
         tag: 'Body-Conduction audio sensors ; Robust Communication ; Speech enhancement ; Speech recognition ; Speaker verification.',
         title: 'VibraVox: A Dataset of French Speech Captured with Body-conduction Audio Sensors',
@@ -95,8 +119,13 @@ export const cardData = [
         authors: [
             { name: 'Julien Hauret', avatar: '/static/images/avatar/julien.jpg' },
             { name: 'Malo Olivier', avatar: '/static/images/avatar/malo.jpg' },
+            { name: 'Thomas Joubaud', avatar: '/static/images/avatar/' },
+            { name: 'Christophe Langrenne ', avatar: '/static/images/avatar/' },
+            { name: 'Sarah Poirée', avatar: '/static/images/avatar/' },
+            { name: 'Véronique Zimpfer', avatar: '/static/images/avatar/' },
+            { name: 'Éric Bavu', avatar: '/static/images/avatar/eric.jpg' },
         ],
-        date: "April 19, 2025",
+        date: "April 30, 2025",
     },
     {
         img: '/static/images/content/insa.png',
@@ -142,7 +171,7 @@ const Publications: React.FC = () => {
                 <Grid size={{ xs: 12, md: 8 }}>
                     <SyledCard
                         variant="outlined"
-                        onClick={() => handleClick("https://doi.org/10.1016/j.specom.2025.103238")}
+                        onClick={() => handleClick("https://huggingface.co/Cnam-LMSSC/wav2vec2-french-phonemizer")}
                         onFocus={() => handleFocus(0)}
                         onBlur={handleBlur}
                         tabIndex={0}
@@ -174,11 +203,11 @@ const Publications: React.FC = () => {
                                     minHeight: '150px', // Adjust this value as needed
                                     overflow: 'auto', // Add scroll if content overflows
                                     textAlign: 'justify', // Justify the text
+                                    whiteSpace: 'pre-line', // Preserve line breaks from \n
                                 }}
                                 fontFamily={'Roboto'}
-                            >
-                                {cardData[0].description}
-                            </StyledTypography>
+                                dangerouslySetInnerHTML={{ __html: cardData[0].description }}
+                            />
                         </SyledCardContent>
                         <Author authors={cardData[0].authors} date={cardData[0].date} />
                     </SyledCard>
@@ -186,7 +215,7 @@ const Publications: React.FC = () => {
                 <Grid size={{ xs: 12, md: 8 }}>
                     <SyledCard
                         variant="outlined"
-                        onClick={() => handleClick("/static/images/papers/MaloOLIVIER_MasterThesis.pdf")}
+                        onClick={() => handleClick("https://doi.org/10.1016/j.specom.2025.103238")}
                         onFocus={() => handleFocus(0)}
                         onBlur={handleBlur}
                         tabIndex={0}
@@ -194,7 +223,7 @@ const Publications: React.FC = () => {
                     >
                         <CardMedia
                             component="img"
-                            alt="insa"
+                            alt="vibravox"
                             image={cardData[1].img}
                             aspect-ratio="16 / 9"
                             sx={{
@@ -225,6 +254,50 @@ const Publications: React.FC = () => {
                             </StyledTypography>
                         </SyledCardContent>
                         <Author authors={cardData[1].authors} date={cardData[1].date} />
+                    </SyledCard>
+                </Grid>
+                <Grid size={{ xs: 12, md: 8 }}>
+                    <SyledCard
+                        variant="outlined"
+                        onClick={() => handleClick("/static/images/papers/MaloOLIVIER_MasterThesis.pdf")}
+                        onFocus={() => handleFocus(0)}
+                        onBlur={handleBlur}
+                        tabIndex={0}
+                        className={focusedCardIndex === 0 ? 'Mui-focused' : ''}
+                    >
+                        <CardMedia
+                            component="img"
+                            alt="insa"
+                            image={cardData[2].img}
+                            aspect-ratio="16 / 9"
+                            sx={{
+                                borderBottom: '1px solid',
+                                borderColor: 'divider',
+                            }}
+                        />
+
+                        <SyledCardContent>
+                            <Typography gutterBottom variant="caption" component="div" fontFamily={'Roboto'}>
+                                {cardData[2].tag}
+                            </Typography>
+                            <Typography gutterBottom variant="h6" component="div" fontFamily={'Roboto'}>
+                                {cardData[2].title}
+                            </Typography>
+                            <StyledTypography
+                                variant="body2"
+                                color="text.secondary"
+                                gutterBottom
+                                sx={{
+                                    minHeight: '150px', // Adjust this value as needed
+                                    overflow: 'auto', // Add scroll if content overflows
+                                    textAlign: 'justify', // Justify the text
+                                }}
+                                fontFamily={'Roboto'}
+                            >
+                                {cardData[2].description}
+                            </StyledTypography>
+                        </SyledCardContent>
+                        <Author authors={cardData[2].authors} date={cardData[2].date} />
                     </SyledCard>
                 </Grid>
             </Grid>
