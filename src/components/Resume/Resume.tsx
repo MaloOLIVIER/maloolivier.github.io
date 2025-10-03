@@ -654,7 +654,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Leading a 12-month R&D project (€23K) to develop advanced speech processing algorithms for French L2 pronunciation evaluation
+                                            Leading a <b>12-month</b> R&D project (€23K) to develop advanced speech processing algorithms for French L2 pronunciation evaluation
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -732,7 +732,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Teaching Python programming fundamentals to 25+ Master's students in Mechanical Engineering
+                                            Teaching Python programming fundamentals to <b>25+</b> Master's students in Mechanical Engineering
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -741,7 +741,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Designed and delivered 30 hours of intensive coursework covering NumPy and Matplotlib for engineering applications
+                                            Designed and delivered <b>30 hours</b> of intensive coursework covering NumPy and Matplotlib for engineering applications
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -774,7 +774,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Acoustics experiments and recording sessions for data collection
+                                            Developed and deployed wav2vec2-french-phonemizer model achieving <b>4.2% PER</b> on French speech recognition, generating <b>180,000+ downloads (46,000+ monthly)</b> on HuggingFace platform
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -783,7 +783,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Monitoring, quality control and consistency of collected data
+                                            Built VibraVox dataset comprising <b>45+ hours</b> of synchronized 6-channel audio from 188 participants across 5 body-conduction sensors, resulting in <b>139,000+ downloads (29,000+ monthly)</b> for speech research applications
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -792,8 +792,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Python speech transcription project based on the CNAM EBEN project (Pytorch, Pytorch Lightning, Hydra, Hugging Face).
-                                            Use of a tokenizer, evaluation metrics (Word Error Rate, Character Error Rate, Phoneme Error Rate, CTC cost function, transformer architectures) for S2T and S2P ASR tasks
+                                            Engineered production-ready ASR training pipeline using PyTorch Lightning, Hydra, and TensorBoard, enabling fine-tuning of transformer-based models with DDP multi-GPU support on Jean ZAY supercomputer
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -802,7 +801,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Handling of Whisper from open AI and wav2vec2-large-xlsr-53-english
+                                            Implemented automated data quality filtering using Voice Activity Detection and energy-based metrics, processing <b>30,568 initial recordings</b> and retaining <b>28,471 high-quality samples</b> (93.1% retention rate)
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -811,7 +810,7 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            Work integrated into the journal article presenting the VibraVox dataset
+                                            Conducted experimental data collection protocol recording <b>200 participants</b> using 6 microphones simultaneously in controlled acoustic environments with 5th-order ambisonic spatialization
                                         </Typography>
                                     </Box>
                                 </ListItem>
@@ -820,7 +819,25 @@ const Resume: React.FC = () => {
                                         alignItems="center">
                                         <FiberManualRecordIcon sx={{ mr: 1 }} />
                                         <Typography variant="body1" fontFamily={'Roboto'}>
-                                            High performance multi-GPU computation using IDRIS' Jean ZAY supercomputer
+                                            Optimized speech recognition models using trapezoidal learning rate scheduling and transformer layer freezing strategies from wav2vec 2.0 research, achieving <b>6.4% PER</b> on reference microphone test set
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Contributed to EBEN (Extreme Bandwidth Extension Network) speech enhancement research for body-conduction microphones, supporting ongoing doctoral research in degraded speech restoration
+                                        </Typography>
+                                    </Box>
+                                </ListItem>
+                                <ListItem>
+                                    <Box display="flex"
+                                        alignItems="center">
+                                        <FiberManualRecordIcon sx={{ mr: 1 }} />
+                                        <Typography variant="body1" fontFamily={'Roboto'}>
+                                            Collaborated using Agile methodology with PhD candidate and professor, delivering project milestones ahead of schedule and co-authoring scientific article for peer-reviewed publication
                                         </Typography>
                                     </Box>
                                 </ListItem>
